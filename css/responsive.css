@@ -1,0 +1,11 @@
+@charset "utf-8";
+@media all and ( max-width : 1110px){
+    /*layout*/
+    .container{
+    width: 100%;
+    padding: 0 15px;
+}
+nav{
+    display: flex;
+}
+}
