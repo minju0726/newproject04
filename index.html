@@ -11,7 +11,8 @@
     />
     <!-- 웹페이지와 관련된 키워드를 정의 -->
     <meta name="keywords" content="web designer, publisher, developer" />
-    <!-- font aweaome -->
+    <!-- css -->
+    <!-- font-aweaome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -20,37 +21,165 @@
     />
     <!-- 스와퍼적용 -->
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- js 적용 -->
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- js적용 -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>My Design Portfolio</title>
   </head>
   <body>
     <header>
-        <!-- 메뉴 -->
+      <!-- 메뉴 -->
+      <div class="header-inner">
         <nav class="container">
-            <button class="menu-toggle-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="main-menu">
-                <li><a href="#">home</a></li>
-                <li><a href="#">work</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
-            <ul class="social-menu">
-                <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href=""><i class="fab fa-twitter"></i></a></li>
-            </ul>
+          <button class="menu-toggle-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="main-menu">
+            <li><a href="#">home</a></li>
+            <li><a href="#">work</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+          <ul class="social-menu">
+            <li>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-twitter"></i></a>
+            </li>
+          </ul>
         </nav>
-        <!-- 타이틀 -->
-        <div class="header-title"></div>
+      </div>
     </header>
+    <div class="header-bottom">
+      <h1>My Design Portfolio</h1>
+      <h2>Design solutions for Your besiness</h2>
+    </div>
+    <!-- feature -->
+    <section class="feature">
+      <ul class="container feature-list">
+        <li class="item">
+          <a href="#">
+            <img src="images/feature_icon_web.png" alt="웹아이콘" />
+            <h3>web design</h3>
+          </a>
+        </li>
+        <li class="item">
+          <a href="#">
+            <img src="images/feature_icon_graphic.png" alt="웹아이콘" />
+            <h3>graphic design</h3>
+          </a>
+        </li>
+        <li class="item">
+          <a href="#">
+            <img src="images/feature_icon_video.png" alt="웹아이콘" />
+            <h3>video design</h3>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- services -->
+    <section class="services container">
+      <h1>Design Services</h1>
+      <div class="contents">
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+            illo, laborum error nam fugit officia enim, deserunt quod sed sequi
+            expedita doloribus itaque accusamus exercitationem quo a laboriosam
+            suscipit dolore.
+          </p>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+            illo, laborum error nam fugit officia enim, deserunt quod sed sequi
+            expedita doloribus itaque accusamus exercitationem quo a laboriosam
+            suscipit dolore.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- portfolio -->
+    <section class="portfolio">
+      <div class="portfolio-inner container">
+        <h1>portfolio</h1>
+        <!-- swiper -->
+        <div class="portfolio-slider-wrap">
+          <!-- Swiper -->
+          <div class="swiper portfolioSwiper">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <img src="images/portfolio_item01.jpg" alt="포폴1">
+                <div class="caption">
+                  <h3>portfolio title01</h3>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/portfolio_item02.jpg" alt="포폴2">
+                <div class="caption">
+                  <h3>portfolio title02</h3>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/portfolio_item03.jpg" alt="포폴3">
+                <div class="caption">
+                  <h3>portfolio title03</h3>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/portfolio_item04.jpg" alt="포폴4">
+                <div class="caption">
+                  <h3>portfolio title04</h3>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <!-- more -->
+      </div>
+    </section>
+    <script>
+    var portfolioSwiper = new Swiper(".portfolioSwiper" , {
+        direction:"horizontal",
+        loop:true,
+        slidesPerView:4,
+        spaceBetween:30,
+        // navigation
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        breakpoints:{
+            // 320이상일때
+            320:{
+                slidesPerView:1,
+            },
+            // 480이상일때
+            480:{
+                slidesPerView:2,
+                spaceBetween:30,
+            },
+            // 768이상일때
+            768:{
+                slidesPerView:4,
+                spaceBetween:30,
+            }
+        }  
+        
+    })
+
+    </script>
   </body>
 </html>
