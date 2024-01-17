@@ -21,20 +21,25 @@
     />
     <!-- 스와퍼적용 -->
     <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <!-- js적용 -->
+    <!-- jquery적용 -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
     <title>My Design Portfolio</title>
   </head>
   <body>
     <header>
       <!-- 메뉴 -->
-      <div class="header-inner">
+      
         <nav class="container">
           <button class="menu-toggle-btn">
             <i class="fas fa-bars"></i>
@@ -45,6 +50,13 @@
             <li><a href="#">about</a></li>
             <li><a href="#">contact</a></li>
           </ul>
+          <ul class="main-menu1">
+            <li><a href="#">home</a></li>
+            <li><a href="#">work</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+          
           <ul class="social-menu">
             <li>
               <a href=""><i class="fab fa-instagram"></i></a>
@@ -57,7 +69,7 @@
             </li>
           </ul>
         </nav>
-      </div>
+    
     </header>
     <div class="header-bottom">
       <h1>My Design Portfolio</h1>
@@ -118,68 +130,47 @@
           <div class="swiper portfolioSwiper">
             <ul class="swiper-wrapper">
               <li class="swiper-slide">
-                <img src="images/portfolio_item01.jpg" alt="포폴1">
+                <img src="images/portfolio_item01.jpg" alt="포폴1" />
                 <div class="caption">
                   <h3>portfolio title01</h3>
                 </div>
               </li>
               <li class="swiper-slide">
-                <img src="images/portfolio_item02.jpg" alt="포폴2">
+                <img src="images/portfolio_item02.jpg" alt="포폴2" />
                 <div class="caption">
                   <h3>portfolio title02</h3>
                 </div>
               </li>
               <li class="swiper-slide">
-                <img src="images/portfolio_item03.jpg" alt="포폴3">
+                <img src="images/portfolio_item03.jpg" alt="포폴3" />
                 <div class="caption">
                   <h3>portfolio title03</h3>
                 </div>
               </li>
               <li class="swiper-slide">
-                <img src="images/portfolio_item04.jpg" alt="포폴4">
+                <img src="images/portfolio_item04.jpg" alt="포폴4" />
                 <div class="caption">
                   <h3>portfolio title04</h3>
                 </div>
               </li>
             </ul>
-            <div class="swiper-button-next"></div>
+            <!--//swiper-wrapper-->
+            <div class="controls">
+              <span class="prev"><i class="fas fa-chevron-left"></i></span>
+              <span class="next"><i class="fas fa-chevron-right"></i></span>
+            </div>
+
+            <!-- <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination"></div> -->
           </div>
         </div>
+        <!-- swiper끝 -->
         <!-- more -->
+        <p class="read-more">
+          <a href="#" class="btn">More portfolio</a>
+        </p>
       </div>
     </section>
-    <script>
-    var portfolioSwiper = new Swiper(".portfolioSwiper" , {
-        direction:"horizontal",
-        loop:true,
-        slidesPerView:4,
-        spaceBetween:30,
-        // navigation
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        breakpoints:{
-            // 320이상일때
-            320:{
-                slidesPerView:1,
-            },
-            // 480이상일때
-            480:{
-                slidesPerView:2,
-                spaceBetween:30,
-            },
-            // 768이상일때
-            768:{
-                slidesPerView:4,
-                spaceBetween:30,
-            }
-        }  
-        
-    })
-
-    </script>
   </body>
 </html>

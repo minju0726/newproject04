@@ -30,6 +30,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   height: 40px;
+  position: relative;
 }
 .main-menu {
   display: flex;
@@ -42,6 +43,18 @@ nav {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
+}
+.main-menu1{
+    width: 100%;
+    background-color: #363636;
+    position: absolute;
+    top: 40px;
+    left: 0;
+padding: 10px 15px;
+display: none;
+}
+.main-menu1 li a{
+    color: #fff;
 }
 .social-menu {
   display: flex;
@@ -59,11 +72,17 @@ nav {
   line-height: 30px;
   color: #fff;
 }
-.menu-toggle-btn {
-  display: none;
+
+.menu-toggle-btn{
+    border: none;
+    background: none;
+    color: #333;
+    font-size: 18px;
+    display: none;
 }
 .header-bottom {
   text-align: center;
+  /* background-color: #777; */
 }
 h1 {
   font-size: 42px;
@@ -79,13 +98,14 @@ h2 {
   text-transform: uppercase;
   margin-bottom: 50px;
 }
-/* =====================feature */
+
+/* ===============feature */
 .feature {
   width: 100%;
   background-color: #363636;
 }
 .feature-list {
-  background: url("../images/feature_bg.jpg");
+  background: url("../images/feature_bg.jpg") no-repeat center;
   display: flex;
 }
 .feature-list .item {
@@ -106,11 +126,12 @@ h2 {
   text-transform: uppercase;
 }
 .feature-list .item a h3 {
-  margin-top: 30px;
+  margin-top: 10px;
   font-family: "PT Serif", serif;
   font-size: 20px;
   line-height: 20px;
 }
+/* ======================portfolio */
 .services {
   padding: 50px 0;
 }
@@ -127,8 +148,7 @@ h2 {
 .services .contents div p {
   word-break: break-all;
 }
-
-/* =======================portfolio */
+/* =======portfolio */
 .portfolio {
   background-color: #d7d8d9;
   padding: 50px 0;
@@ -136,15 +156,14 @@ h2 {
 .portfolio h1 {
   margin-bottom: 30px;
 }
-.swiper-slide {
-  position: relative;
-}
+
 .caption {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 50px;
+  line-height: 50px;
   background-color: rgba(0, 0, 0, 0.5);
+  /* width: 100%; */
   color: #fff;
   font-size: 14px;
   font-weight: bold;
@@ -152,6 +171,45 @@ h2 {
   text-align: center;
   width: 254px;
 }
-.caption h3{
-  line-height: 50px;
+
+.portfolio-slider-wrap {
+  position: relative;
+}
+.controls span{
+  position: absolute; 
+  width: 36px;
+  height: 36px;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* z-index: 999; */
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  z-index: 999;
+  text-align: center;
+  line-height: 36px;
+}
+.controls .prev{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.controls .next{
+ position: absolute;
+ top: 50%;
+  transform: translateY(-50%);
+ right: 0;
+}
+/* more btn */
+.read-more{
+  margin-top: 30px;
+  text-align: center;
+}
+.btn{
+  width: 234px;
+  line-height: 60px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
 }
