@@ -70,4 +70,13 @@
     flex-wrap: wrap;
     gap: 20px;
 }
+/* footer */
+.fotter-top{
+  flex-direction: column;
+  padding: 50px 10px;
+}
+.copyright{
+  margin-top: 10px;
+  text-align: center;
+}
 }
